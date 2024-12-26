@@ -13,6 +13,7 @@ if (isset($_SESSION['user-id'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +25,15 @@ if (isset($_SESSION['user-id'])) {
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <!-- AOS LINKS 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script> -->
+
+    <!-- MAGIC UI LINKS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magic-ui/dist/magic-ui.css">
+    <script src="https://cdn.jsdelivr.net/npm/magic-ui/dist/magic-ui.js"></script>
+
+
 </head>
 
 <body>
@@ -34,7 +44,6 @@ if (isset($_SESSION['user-id'])) {
             <ul class="nav-items">
                 <li><a href="<?= ROOT_URL ?>blog.php">Blog</a></li>
                 <li><a href="<?= ROOT_URL ?>about.php">About</a></li>
-                <li><a href="<?= ROOT_URL ?>services.php">Service</a></li>
                 <li><a href="<?= ROOT_URL ?>contact.php">Contact</a></li>
                 <?php if (isset($_SESSION['user-id'])) : ?>
                     <li class="nav-profile">
@@ -55,7 +64,7 @@ if (isset($_SESSION['user-id'])) {
         </div>
     </nav>
 
-  
+
 </body>
 
 </html>
