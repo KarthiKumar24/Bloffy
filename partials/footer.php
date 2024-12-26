@@ -9,7 +9,7 @@
     </div>
     <div class="container footer-container">
         <article>
-            <h3>Ouick Links</h3>
+            <h3>Quick Links</h3>
             <ul>
                 <li><a href="<?= ROOT_URL ?>index.php">Home</a></li>
                 <li><a href="<?= ROOT_URL ?>blog.php">Blog</a></li>
