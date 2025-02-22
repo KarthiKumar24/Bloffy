@@ -162,11 +162,14 @@ nav button {
   display: block;
   width: 100%;
 }
+.nav-profile ul li a:hover{
+  background-color: var(--color-gray-700);
+}
 
 .nav-profile ul li:last-child a {
   background: var(--color-red);
-  color: var(--color-bg);
 }
+
 /*  */
 /* Category */
 .category-button {
@@ -501,85 +504,46 @@ select {
 /* ABout */
 
 .about-container {
-  margin-top: -50px;
-  display: flex;
-  justify-self: center;
-  align-items: flex-start;
-  padding: 5% 1%;
-  gap: 4rem;
-  width: 70%;
-  max-width: 1800px;
-  height: auto;
-  margin-inline: auto;
-  @media screen and (max-width: 600px) {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  @media screen and (max-width: 1024px) {
-    width: 100%;
-    flex-direction: column;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
 }
 
 .about-items {
-  height: auto;
-  display: flex;
-  justify-items: start;
-  align-items: center;
-  gap: 40px;
-  @media screen and (max-width: 600px) {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  @media screen and (max-width: 1024px) {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-.about-head {
-  width: 50%;
-  height: auto;
-  /* background-color: red; */
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  @media screen and (max-width: 600px) {
-    width: 90%;
-  }
-  @media screen and (max-width:1024px) {
-    width: 90%;
-    flex-direction: column;
-  }
-}
-.about-head img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
+  display: contents;
 }
 
 .about-body {
-  /* background-color: #00c476; */
-  width: 50%;
-  @media screen and (max-width: 600px) {
-  width: 90%;
-  }
-  @media screen and (max-width: 1024px) {
-  width: 90%;
-  }
-}
-.about-body p {
-  width: 530px;
   text-align: justify;
-  @media screen and (max-width: 600px) {
-    width: 100%;
-    text-align: start;
+}
+
+.about-head img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-body h2 {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    text-align: justify;
   }
-  @media screen and (max-width: 1024px) {
-    width: 400px;
-    text-align: start;
+  .about-body {
+    order: 1;
+  }
+  .about-head {
+    order: 2;
+  }
+  .about-body p {
+    text-align: justify;
   }
 }
 
